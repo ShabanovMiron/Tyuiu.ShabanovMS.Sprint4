@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Tyuiu.ShabanovMS.Sprint4.Task1.V26.Lib;
+namespace Tyuiu.ShabanovMS.Sprint4.Task1.V26
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Спринт #4 | Выполнил: Шабанов М.С. | АСОиУб-23-1";
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* Спринт 4                                                                *");
+            Console.WriteLine("* Тема: Одномерные массивы (статический ввод)                             *");
+            Console.WriteLine("* Задание #1                                                              *");
+            Console.WriteLine("* Вариант #15                                                             *");
+            Console.WriteLine("*Выполнил: Шабанов Мирон Сергеевич | АСОиУб-23-1                          *");
+            Console.WriteLine("* УСЛОВИЕ:                                                                *");
+            Console.WriteLine("* Дан одномерный целочисленный массив на 10 элементов заполненный         *");
+            Console.WriteLine("* статическими значениями в диапазоне от 0 до 9 подсчитать произведение   *");
+            Console.WriteLine("* нечетных элементов массива.                                             *");
+            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("***************************************************************************");
+
+            int length;
+            Console.WriteLine("Введите кол-во элементов массива: ");
+            length = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int[length];
+
+            for (int i = 0; i <= length - 1; i++)
+            {
+                Console.Write("Введите " + i + " элемент массива: ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Console.WriteLine("Массив: ");
+            for (int i = 0; i <= length - 1; i++)
+            {
+                Console.Write(array[i] + "\t");
+            }
+
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ                                                               *");
+            Console.WriteLine("***************************************************************************");
+
+            DataService ds = new DataService();
+            int result = ds.Calculate(array);
+            Console.WriteLine("Произведение нечетных элементов массива: " + result);
+            Console.ReadKey();
+
+        }
+    }
+}
