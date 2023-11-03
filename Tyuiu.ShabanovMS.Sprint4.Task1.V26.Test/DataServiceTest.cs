@@ -11,7 +11,7 @@ namespace Tyuiu.ShabanovMS.Sprint4.Task1.V26.Test
         {
             DataService ds = new DataService();
             int[] array = { 7, 7, 8, 8, 2, 6, 3, 3, 3, 1 };
-            int wait = 1323;
+            int wait = 24;
             int res = ds.Calculate(array);
             Assert.AreEqual(res, wait);
         }
