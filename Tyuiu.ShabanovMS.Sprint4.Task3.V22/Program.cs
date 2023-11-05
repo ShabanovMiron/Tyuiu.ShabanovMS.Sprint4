@@ -13,13 +13,13 @@ namespace Tyuiu.ShabanovMS.Sprint4.Task3.V22
             Console.Title = "Спринт #4 | Выполнил: Шабанов М.С. | АСОиУб-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт 4                                                                *");
-            Console.WriteLine("* Тема: Одномерные массивы (генератор случайных чисел)                    *");
-            Console.WriteLine("* Задание #2                                                              *");
-            Console.WriteLine("* Вариант #11                                                             *");
+            Console.WriteLine("* Тема: Двумерные массивы (статический ввод)                              *");
+            Console.WriteLine("* Задание #3                                                              *");
+            Console.WriteLine("* Вариант #22                                                             *");
             Console.WriteLine("*Выполнил: Шабанов Мирон Сергеевич | АСОиУб-23-1                          *");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Дан одномерный целочисленный массив на 15 элементов заполненный         *");
-            Console.WriteLine("* случайными в диапазоне от 3 до 8 подсчитать сумму четных элементов      *");
+            Console.WriteLine("* Дан двумерный целочисленный массив 5 на 5 элементов найти максимальный  *");
+            Console.WriteLine("* элемент первой строки                                                   *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
@@ -28,7 +28,7 @@ namespace Tyuiu.ShabanovMS.Sprint4.Task3.V22
 
             DataService ds = new DataService();
 
-            int[,] array = {
+            int[,] array = new int[5,5] {
                 { 4, 4, 7, 8, 9 },
                 { 9, 5, 9, 7, 8 },
                 { 7, 4, 9, 4, 6 },
@@ -44,9 +44,10 @@ namespace Tyuiu.ShabanovMS.Sprint4.Task3.V22
                 {
                     Console.Write($"{array[i, j]} \t");
                 }
+                Console.WriteLine();
             }
 
-            Console.WriteLine();
+            
             int res = ds.Calculate(array);
             Console.WriteLine("Наибольший элемент первой строки = " + res);
 
